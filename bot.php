@@ -58,7 +58,7 @@ function registercode($chat_id,$code,$file_id,$caption){
 function sendpostcode($chat_id,$code,$file_id,$type){
 
 	
-	$codefirstpart ="<code>@glassy_bot ". $type . ' ' . $code . "</code>";
+	$codefirstpart ="<code>@creat_btt_glassBot ". $type . ' ' . $code . "</code>";
 	$token = "246754101:AAGrFLzpxNr4HIHhmMTtdaWwzMbaRzd3Uz0";
 	
 	$request = curl_init('https://api.telegram.org/bot'.$token.'/sendMessage?chat_id='.$chat_id);
@@ -197,7 +197,7 @@ function processMessage($message) {
         
                                                                                    🌺 به امید موفقیت شما 🌺
         
-       @(^_^)@  با تشکر مدیریت آموزشی. @glassy_bot  ','reply_markup' => json_encode($reply) )); 
+       @(^_^)@  با تشکر مدیریت آموزشی. @creat_btt_glassBot  ','reply_markup' => json_encode($reply) )); 
  } 
          
 
@@ -630,7 +630,7 @@ function processMessage($message) {
   	//apiRequestWebhook("editMessageReplyMarkup", array('inline_message_id' => $inline_message_id,'reply_markup' => json_encode($reply)));
   	
   	
-  	$tokena = "249927609:AAHKr5bnsqJGWSRk1YMmpYkujHB496LzhLE"; 
+  	$tokena = "246754101:AAGrFLzpxNr4HIHhmMTtdaWwzMbaRzd3Uz0"; 
     
     $request = curl_init('https://api.telegram.org/bot'.$tokena.'/editMessageReplyMarkup?inline_message_id='.$inline_message_id);
     curl_setopt($request,CURLOPT_POST,true);
