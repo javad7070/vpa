@@ -59,7 +59,7 @@ function sendpostcode($chat_id,$code,$file_id,$type){
 
 	
 	$codefirstpart ="<code>@glassy_bot ". $type . ' ' . $code . "</code>";
-	$token = "249927609:AAHKr5bnsqJGWSRk1YMmpYkujHB496LzhLE";
+	$token = "246754101:AAGrFLzpxNr4HIHhmMTtdaWwzMbaRzd3Uz0";
 	
 	$request = curl_init('https://api.telegram.org/bot'.$token.'/sendMessage?chat_id='.$chat_id);
     curl_setopt($request,CURLOPT_POST,true);
@@ -93,7 +93,7 @@ function sendpreview($method,$chat_id,$file_id,$caption){
 	
 	if ($method == 'sendPhoto' ){
 	
-		$token = "249927609:AAHKr5bnsqJGWSRk1YMmpYkujHB496LzhLE";
+		$token = "246754101:AAGrFLzpxNr4HIHhmMTtdaWwzMbaRzd3Uz0";
     		$request = curl_init('https://api.telegram.org/bot'.$token.'/'.$method.'?chat_id='.$chat_id);
     		curl_setopt($request,CURLOPT_POST,true);
     		curl_setopt($request,CURLOPT_POSTFIELDS,array('photo' =>$file_id,'caption' =>$caption,'reply_markup' => json_encode($reply)));
@@ -101,7 +101,7 @@ function sendpreview($method,$chat_id,$file_id,$caption){
   	  		
 	}else if ($method == 'sendAudio' ){
 	
-		$token = "249927609:AAHKr5bnsqJGWSRk1YMmpYkujHB496LzhLE";
+		$token = "246754101:AAGrFLzpxNr4HIHhmMTtdaWwzMbaRzd3Uz0";
     		$request = curl_init('https://api.telegram.org/bot'.$token.'/'.$method.'?chat_id='.$chat_id);
     		curl_setopt($request,CURLOPT_POST,true);
     		curl_setopt($request,CURLOPT_POSTFIELDS,array('audio' =>$file_id,'reply_markup' => json_encode($reply)));
@@ -109,7 +109,7 @@ function sendpreview($method,$chat_id,$file_id,$caption){
   	  		
 	}else if ($method == 'sendVideo' ){
 	
-		$token = "249927609:AAHKr5bnsqJGWSRk1YMmpYkujHB496LzhLE";
+		$token = "246754101:AAGrFLzpxNr4HIHhmMTtdaWwzMbaRzd3Uz0";
     		$request = curl_init('https://api.telegram.org/bot'.$token.'/'.$method.'?chat_id='.$chat_id);
     		curl_setopt($request,CURLOPT_POST,true);
     		curl_setopt($request,CURLOPT_POSTFIELDS,array('video' =>$file_id,'reply_markup' => json_encode($reply)));
@@ -117,7 +117,7 @@ function sendpreview($method,$chat_id,$file_id,$caption){
   	  		
 	}else if ($method == 'sendVoice' ){
 	
-		$token = "249927609:AAHKr5bnsqJGWSRk1YMmpYkujHB496LzhLE";
+		$token = "246754101:AAGrFLzpxNr4HIHhmMTtdaWwzMbaRzd3Uz0";
     		$request = curl_init('https://api.telegram.org/bot'.$token.'/'.$method.'?chat_id='.$chat_id);
     		curl_setopt($request,CURLOPT_POST,true);
     		curl_setopt($request,CURLOPT_POSTFIELDS,array('voice' =>$file_id,'reply_markup' => json_encode($reply)));
@@ -125,7 +125,7 @@ function sendpreview($method,$chat_id,$file_id,$caption){
   	  		
 	}else if ($method == 'sendDocument' ){
 	
-		$token = "249927609:AAHKr5bnsqJGWSRk1YMmpYkujHB496LzhLE";
+		$token = "246754101:AAGrFLzpxNr4HIHhmMTtdaWwzMbaRzd3Uz0";
     		$request = curl_init('https://api.telegram.org/bot'.$token.'/'.$method.'?chat_id='.$chat_id);
     		curl_setopt($request,CURLOPT_POST,true);
     		curl_setopt($request,CURLOPT_POSTFIELDS,array('document' =>$file_id,'reply_markup' => json_encode($reply)));
@@ -273,7 +273,7 @@ function processMessage($message) {
         
    } else if (isset($message['audio']['file_id'])){
     
-    		$token = "249927609:AAHKr5bnsqJGWSRk1YMmpYkujHB496LzhLE";
+    		$token = "246754101:AAGrFLzpxNr4HIHhmMTtdaWwzMbaRzd3Uz0";
     		$url = 'https://api.telegram.org/bot'.$token.'/getFile?file_id='.$Afile_id;
     		$content = file_get_contents($url);
     		$file = json_decode($content,true);
@@ -295,7 +295,7 @@ function processMessage($message) {
    	
     }else if (isset($message['voice']['file_id'])){
     
-    		$token = "249927609:AAHKr5bnsqJGWSRk1YMmpYkujHB496LzhLE";
+    		$token = "246754101:AAGrFLzpxNr4HIHhmMTtdaWwzMbaRzd3Uz0";
     		$url = 'https://api.telegram.org/bot'.$token.'/getFile?file_id='.$VOfile_id;
     		$content = file_get_contents($url);
     		$file = json_decode($content,true);
@@ -317,7 +317,7 @@ function processMessage($message) {
    	
     }else if (isset($message['video']['file_id'])){
     
-    		$token = "249927609:AAHKr5bnsqJGWSRk1YMmpYkujHB496LzhLE";
+    		$token = "246754101:AAGrFLzpxNr4HIHhmMTtdaWwzMbaRzd3Uz0";
     		$url = 'https://api.telegram.org/bot'.$token.'/getFile?file_id='.$Vfile_id;
     		$content = file_get_contents($url);
     		$file = json_decode($content,true);
@@ -339,7 +339,7 @@ function processMessage($message) {
    	
     }else if (isset($message['document']['file_id'])){
     
-    		$token = "249927609:AAHKr5bnsqJGWSRk1YMmpYkujHB496LzhLE";
+    		$token = "246754101:AAGrFLzpxNr4HIHhmMTtdaWwzMbaRzd3Uz0";
     		$url = 'https://api.telegram.org/bot'.$token.'/getFile?file_id='.$Dfile_id;
     		$content = file_get_contents($url);
     		$file = json_decode($content,true);
@@ -363,7 +363,7 @@ function processMessage($message) {
     		
     		
     		$caption = $message['caption'];
-    		$token = "249927609:AAHKr5bnsqJGWSRk1YMmpYkujHB496LzhLE";
+    		$token = "246754101:AAGrFLzpxNr4HIHhmMTtdaWwzMbaRzd3Uz0";
     		$url = 'https://api.telegram.org/bot'.$token.'/getFile?file_id='.$Pfile_id;
     		$content = file_get_contents($url);
     		$file = json_decode($content,true);
@@ -386,7 +386,7 @@ function processMessage($message) {
   		}else if ($selectedmenu == 'ساخت نظر سنجی'){
   			$type = 'getpoll';
   			
-  			$token = "249927609:AAHKr5bnsqJGWSRk1YMmpYkujHB496LzhLE";
+  			$token = "246754101:AAGrFLzpxNr4HIHhmMTtdaWwzMbaRzd3Uz0";
 	
 			$request = curl_init('https://api.telegram.org/bot'.$token.'/sendMessage?chat_id='.$chat_id);
 			curl_setopt($request,CURLOPT_POST,true);
@@ -439,7 +439,7 @@ function processMessage($message) {
     }
     
     function submitpollinfo($file_id){
-    	$token = "249927609:AAHKr5bnsqJGWSRk1YMmpYkujHB496LzhLE";
+    	$token = "246754101:AAGrFLzpxNr4HIHhmMTtdaWwzMbaRzd3Uz0";
 	
 	$request = curl_init('https://api.telegram.org/bot'.$token.'/sendMessage?chat_id='.$chat_id);
     curl_setopt($request,CURLOPT_POST,true);
@@ -657,7 +657,7 @@ function processMessage($message) {
   	//apiRequestWebhook("editMessageReplyMarkup", array('inline_message_id' => $inline_message_id,'reply_markup' => json_encode($reply)));
   	
   	
-  	$tokena = "249927609:AAHKr5bnsqJGWSRk1YMmpYkujHB496LzhLE"; 
+  	$tokena = "246754101:AAGrFLzpxNr4HIHhmMTtdaWwzMbaRzd3Uz0"; 
     
     $request = curl_init('https://api.telegram.org/bot'.$tokena.'/editMessageReplyMarkup?inline_message_id='.$inline_message_id);
     curl_setopt($request,CURLOPT_POST,true);
