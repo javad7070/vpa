@@ -58,8 +58,8 @@ function registercode($chat_id,$code,$file_id,$caption){
 function sendpostcode($chat_id,$code,$file_id,$type){
 
 	
-	$codefirstpart ="<code>@creat_ssbtt_glassbot ". $type . ' ' . $code . "</code>";
-	$token = "273989039:AAEKSUZoT2KDHsR81IYMKYIH8bYx_AKLFeY";
+	$codefirstpart ="<code>@glass_alfabtn_bot ". $type . ' ' . $code . "</code>";
+	$token = "271681195:AAFQtFU7O9I9tAdj0lHGzOYwXcprISExG9o";
 	
 	$request = curl_init('https://api.telegram.org/bot'.$token.'/sendMessage?chat_id='.$chat_id);
     curl_setopt($request,CURLOPT_POST,true);
@@ -93,7 +93,7 @@ function sendpreview($method,$chat_id,$file_id,$caption){
 	
 	if ($method == 'sendPhoto' ){
 	
-		$token = "273989039:AAEKSUZoT2KDHsR81IYMKYIH8bYx_AKLFeY";
+		$token = "271681195:AAFQtFU7O9I9tAdj0lHGzOYwXcprISExG9o";
     		$request = curl_init('https://api.telegram.org/bot'.$token.'/'.$method.'?chat_id='.$chat_id);
     		curl_setopt($request,CURLOPT_POST,true);
     		curl_setopt($request,CURLOPT_POSTFIELDS,array('photo' =>$file_id,'caption' =>$caption,'reply_markup' => json_encode($reply)));
@@ -101,7 +101,7 @@ function sendpreview($method,$chat_id,$file_id,$caption){
   	  		
 	}else if ($method == 'sendAudio' ){
 	
-		$token = "273989039:AAEKSUZoT2KDHsR81IYMKYIH8bYx_AKLFeY";
+		$token = "271681195:AAFQtFU7O9I9tAdj0lHGzOYwXcprISExG9o";
     		$request = curl_init('https://api.telegram.org/bot'.$token.'/'.$method.'?chat_id='.$chat_id);
     		curl_setopt($request,CURLOPT_POST,true);
     		curl_setopt($request,CURLOPT_POSTFIELDS,array('audio' =>$file_id,'reply_markup' => json_encode($reply)));
@@ -109,7 +109,7 @@ function sendpreview($method,$chat_id,$file_id,$caption){
   	  		
 	}else if ($method == 'sendVideo' ){
 	
-		$token = "273989039:AAEKSUZoT2KDHsR81IYMKYIH8bYx_AKLFeY";
+		$token = "271681195:AAFQtFU7O9I9tAdj0lHGzOYwXcprISExG9o";
     		$request = curl_init('https://api.telegram.org/bot'.$token.'/'.$method.'?chat_id='.$chat_id);
     		curl_setopt($request,CURLOPT_POST,true);
     		curl_setopt($request,CURLOPT_POSTFIELDS,array('video' =>$file_id,'reply_markup' => json_encode($reply)));
@@ -117,7 +117,7 @@ function sendpreview($method,$chat_id,$file_id,$caption){
   	  		
 	}else if ($method == 'sendVoice' ){
 	
-		$token = "273989039:AAEKSUZoT2KDHsR81IYMKYIH8bYx_AKLFeY";
+		$token = "271681195:AAFQtFU7O9I9tAdj0lHGzOYwXcprISExG9o";
     		$request = curl_init('https://api.telegram.org/bot'.$token.'/'.$method.'?chat_id='.$chat_id);
     		curl_setopt($request,CURLOPT_POST,true);
     		curl_setopt($request,CURLOPT_POSTFIELDS,array('voice' =>$file_id,'reply_markup' => json_encode($reply)));
@@ -125,7 +125,7 @@ function sendpreview($method,$chat_id,$file_id,$caption){
   	  		
 	}else if ($method == 'sendDocument' ){
 	
-		$token = "273989039:AAEKSUZoT2KDHsR81IYMKYIH8bYx_AKLFeY";
+		$token = "271681195:AAFQtFU7O9I9tAdj0lHGzOYwXcprISExG9o";
     		$request = curl_init('https://api.telegram.org/bot'.$token.'/'.$method.'?chat_id='.$chat_id);
     		curl_setopt($request,CURLOPT_POST,true);
     		curl_setopt($request,CURLOPT_POSTFIELDS,array('document' =>$file_id,'reply_markup' => json_encode($reply)));
@@ -197,7 +197,7 @@ function processMessage($message) {
         
                                                                                    🌺 به امید موفقیت شما 🌺
         
-       @(^_^)@  با تشکر مدیریت آموزشی. @creat_ssbtt_glassbot  ','reply_markup' => json_encode($reply) )); 
+       @(^_^)@  با تشکر مدیریت آموزشی. @glass_alfabtn_bot  ','reply_markup' => json_encode($reply) )); 
  } 
          
 
@@ -252,7 +252,7 @@ function processMessage($message) {
     		apiRequestWebhook("sendMessage", array('chat_id' => $chat_id, "text" =>'لطفا فایل صوتی خود را وارد کنید' ) );
     }else if($text == 'پست متنی' ){
    	       // registermenu($text);
-    		apiRequestWebhook("sendMessage", array('chat_id' => $chat_id, "text" =>' برای ارسال پست متنی همراه با دکمه های لایک لطفا ابتدا glassy_bot@ را در گروه یا چت مورد نظر خود تایپ کرده و  سپس یک فاصله بگذارید و بعد از آن پیام خود را تایپ کرده سپس ارسال بفرمایید. با تشکر  ' ) );
+    		apiRequestWebhook("sendMessage", array('chat_id' => $chat_id, "text" =>' برای ارسال پست متنی همراه با دکمه های لایک لطفا ابتدا glass_alfabtn_bot@ را در گروه یا چت مورد نظر خود تایپ کرده و  سپس یک فاصله بگذارید و بعد از آن پیام خود را تایپ کرده سپس ارسال بفرمایید. با تشکر  ' ) );
     }else{
     
     $result = mysql_query("SELECT * FROM selectedmenu ORDER BY id DESC LIMIT 1 " );
@@ -273,7 +273,7 @@ function processMessage($message) {
         
    } else if (isset($message['audio']['file_id'])){
     
-    		$token = "273989039:AAEKSUZoT2KDHsR81IYMKYIH8bYx_AKLFeY";
+    		$token = "271681195:AAFQtFU7O9I9tAdj0lHGzOYwXcprISExG9o";
     		$url = 'https://api.telegram.org/bot'.$token.'/getFile?file_id='.$Afile_id;
     		$content = file_get_contents($url);
     		$file = json_decode($content,true);
@@ -295,7 +295,7 @@ function processMessage($message) {
    	
     }else if (isset($message['voice']['file_id'])){
     
-    		$token = "273989039:AAEKSUZoT2KDHsR81IYMKYIH8bYx_AKLFeY";
+    		$token = "271681195:AAFQtFU7O9I9tAdj0lHGzOYwXcprISExG9o";
     		$url = 'https://api.telegram.org/bot'.$token.'/getFile?file_id='.$VOfile_id;
     		$content = file_get_contents($url);
     		$file = json_decode($content,true);
@@ -317,7 +317,7 @@ function processMessage($message) {
    	
     }else if (isset($message['video']['file_id'])){
     
-    		$token = "273989039:AAEKSUZoT2KDHsR81IYMKYIH8bYx_AKLFeY";
+    		$token = "271681195:AAFQtFU7O9I9tAdj0lHGzOYwXcprISExG9o";
     		$url = 'https://api.telegram.org/bot'.$token.'/getFile?file_id='.$Vfile_id;
     		$content = file_get_contents($url);
     		$file = json_decode($content,true);
@@ -339,7 +339,7 @@ function processMessage($message) {
    	
     }else if (isset($message['document']['file_id'])){
     
-    		$token = "273989039:AAEKSUZoT2KDHsR81IYMKYIH8bYx_AKLFeY";
+    		$token = "271681195:AAFQtFU7O9I9tAdj0lHGzOYwXcprISExG9o";
     		$url = 'https://api.telegram.org/bot'.$token.'/getFile?file_id='.$Dfile_id;
     		$content = file_get_contents($url);
     		$file = json_decode($content,true);
@@ -363,7 +363,7 @@ function processMessage($message) {
     		
     		
     		$caption = $message['caption'];
-    		$token = "273989039:AAEKSUZoT2KDHsR81IYMKYIH8bYx_AKLFeY";
+    		$token = "271681195:AAFQtFU7O9I9tAdj0lHGzOYwXcprISExG9o";
     		$url = 'https://api.telegram.org/bot'.$token.'/getFile?file_id='.$Pfile_id;
     		$content = file_get_contents($url);
     		$file = json_decode($content,true);
@@ -386,7 +386,7 @@ function processMessage($message) {
   		}else if ($selectedmenu == 'ساخت نظر سنجی'){
   			$type = 'getpoll';
   			
-  			$token = "273989039:AAEKSUZoT2KDHsR81IYMKYIH8bYx_AKLFeY";
+  			$token = "271681195:AAFQtFU7O9I9tAdj0lHGzOYwXcprISExG9o";
 	
 			$request = curl_init('https://api.telegram.org/bot'.$token.'/sendMessage?chat_id='.$chat_id);
 			curl_setopt($request,CURLOPT_POST,true);
@@ -439,7 +439,7 @@ function processMessage($message) {
     }
     
     function submitpollinfo($file_id){
-    	$token = "273989039:AAEKSUZoT2KDHsR81IYMKYIH8bYx_AKLFeY";
+    	$token = "271681195:AAFQtFU7O9I9tAdj0lHGzOYwXcprISExG9o";
 	
 	$request = curl_init('https://api.telegram.org/bot'.$token.'/sendMessage?chat_id='.$chat_id);
     curl_setopt($request,CURLOPT_POST,true);
@@ -630,7 +630,7 @@ function processMessage($message) {
   	//apiRequestWebhook("editMessageReplyMarkup", array('inline_message_id' => $inline_message_id,'reply_markup' => json_encode($reply)));
   	
   	
-  	$tokena = "273989039:AAEKSUZoT2KDHsR81IYMKYIH8bYx_AKLFeY"; 
+  	$tokena = "271681195:AAFQtFU7O9I9tAdj0lHGzOYwXcprISExG9o"; 
     
     $request = curl_init('https://api.telegram.org/bot'.$tokena.'/editMessageReplyMarkup?inline_message_id='.$inline_message_id);
     curl_setopt($request,CURLOPT_POST,true);
@@ -657,7 +657,7 @@ function processMessage($message) {
   	//apiRequestWebhook("editMessageReplyMarkup", array('inline_message_id' => $inline_message_id,'reply_markup' => json_encode($reply)));
   	
   	
-  	$tokena = "273989039:AAEKSUZoT2KDHsR81IYMKYIH8bYx_AKLFeY"; 
+  	$tokena = "271681195:AAFQtFU7O9I9tAdj0lHGzOYwXcprISExG9o"; 
     
     $request = curl_init('https://api.telegram.org/bot'.$tokena.'/editMessageReplyMarkup?inline_message_id='.$inline_message_id);
     curl_setopt($request,CURLOPT_POST,true);
