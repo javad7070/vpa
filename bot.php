@@ -1,7 +1,7 @@
 <?php
 
-@mysql_connect('localhost','sarvengl_robot','eabbas136919!@#')  or die('DB connection error');
-@mysql_select_db('sarvengl_like');
+@mysql_connect('localhost','adminqByRUj7','vAT8cI9a3n6m')  or die('DB connection error');
+@mysql_select_db('khg');
 mysql_query('SET NAMES UTF8');
 
 
