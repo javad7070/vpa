@@ -1,7 +1,7 @@
 <?php
 
-@mysql_connect('localhost','adminjtVEHeF','27swH_l4P521')  or die('DB connection error');
-@mysql_select_db('phpp');
+@mysql_connect('localhost','adminstj4pje','4lAdcqaw6Ffr')  or die('DB connection error');
+@mysql_select_db('bhp');
 mysql_query('SET NAMES UTF8');
 
 
